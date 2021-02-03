@@ -24,6 +24,10 @@ DROP TABLE IF EXISTS `alunos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `alunos` (
   `idAluno` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
+  `dataNascimento` date NOT NULL,
+  `endereco` varchar(255) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
   PRIMARY KEY (`idAluno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -46,6 +50,7 @@ DROP TABLE IF EXISTS `cursos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cursos` (
   `idCurso` int NOT NULL AUTO_INCREMENT,
+  `nome` varchar(45) NOT NULL,
   PRIMARY KEY (`idCurso`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -68,6 +73,8 @@ DROP TABLE IF EXISTS `notas`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notas` (
   `idNota` int NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(255) NOT NULL,
+  `nota` int NOT NULL,
   PRIMARY KEY (`idNota`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -90,4 +97,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-02-03 17:05:23
+-- Dump completed on 2021-02-03 17:27:11
